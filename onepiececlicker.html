@@ -4,14 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cookie Clicker</title>
+    <title>One Piece Clicker</title>
 </head>
+<style>
+    
+    body {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        background-image: url(1633216.jpg);
+    }
+
+    #score {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: burlywood;
+        padding-left: 40%;
+    }
+
+    button {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 100%;
+        border-radius: 25%;
+    }
+</style>
 
 <body>
-    <img src="images.jpg" alt="Cookie" width="400" id="cookie" onclick="cookieClick()">
+    <img src="apple-touch-icon.png" alt="StrawHat" width="400" id="cookie" onclick="cookieClick()">
     <div id="score">0</div>
     <button id="autoButton" onclick="autoClickUpgrade()"> Upgrade Autoclick (100 clicks) </button>
     <button id="multiButton" onclick="clickMultiUpgrade()"> Upgrade Click Multiplier (100 clicks)</button>
+
+    <nav>
+        <ul>
+            <li><a href="FinalWebsite.html">Home</a></li>
+            <li><a href="/GetToSchool7//index.html">Get To School</a></li>
+            <li><a href="onepiececlicker.html">Straw Hat Clicker</a></li>
+            <li><a href="aboutme.html">Everything About Me</a></li>
+        </ul>
+    </nav>
+
+
 </body>
 <script>
     //configuration
@@ -97,16 +129,16 @@
         cookieText = JSON.parse(cookieText);
 
         autoclickAmount = cookieText.autoclickAmount
-        autoclickCostPerLevel= cookieText.autoclickCostPerLevel
-        autoclickCost= cookieText.autoclickCost
-        clickMulti= cookieText.clickMulti;
-        clickMultiCostPerLevel= cookieText.clickMultiCostPerLevel;
-        clickMultiCost= cookieText.clickMultiCost
-        score= cookieText.score;
-         autoButton.innerHTML = "Upgrade Auto-Click(" + autoclickCost + "clicks)";
-         multiButton.innerHTML = "Upgrade Click Multiplier(" + clickMultiCost + "clicks)";
-            scoreBox.innerHTML = score;
-            scoreBox.innerHTML = score;
+        autoclickCostPerLevel = cookieText.autoclickCostPerLevel
+        autoclickCost = cookieText.autoclickCost
+        clickMulti = cookieText.clickMulti;
+        clickMultiCostPerLevel = cookieText.clickMultiCostPerLevel;
+        clickMultiCost = cookieText.clickMultiCost
+        score = cookieText.score;
+        autoButton.innerHTML = "Upgrade Auto-Click(" + autoclickCost + "clicks)";
+        multiButton.innerHTML = "Upgrade Click Multiplier(" + clickMultiCost + "clicks)";
+        scoreBox.innerHTML = score;
+        scoreBox.innerHTML = score;
     }
     setInterval(autoClick, 250);
 
